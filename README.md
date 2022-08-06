@@ -1,44 +1,38 @@
-///// Landing page project
-// description- a multi-sectioned page which consists of number of sections wtih coressponding number of linked list items to facilitate the transition to sections
-//aim - implementing the DOM ,js codes to convert the project from a static to an interactive one .
+weather journal app
 
-//notes on my steps
+-Aim - to create a server app to hold and send data to the clientside.  
+-description - the app that gets data from an api location like the curent temperature in a certaing zip code location al;ong woth the user data like the feeling under this weather ,and store it in a backend server to retrieve it again to be displayed in the webUI,
+-the app depends heavily on using the promises .
+-the app uses the asynchronous js to operate the functions in the background to acoid intrupting the peocesses running in the page .
 
-///////// Steps illustration
--creating the golbal variables to store the most targeted elements in
--creatin the function that contains all the other functions and loops
+steps illustraion
 
-// requirement no.1
-creating a dynamic list items in a navbar hyperlinked with the corresponding sections
+= in the app.js
 
-- creating the list elements in order to subsqently attach the linked list items to the corresponding section of each one .
-  -creating the anchor element to later be appended to the list items inside the unordered list
-  -appenidng list items to the parent ul item .
+-storing the desired elements from the HTML file in variables to be used dynamically
+-extrating date informaion like month , time , year
+-fetching the api locaion using promoises when clicking on an icon right after inserting the required data ,
+-psoting the data obtained form the api to the server using a function thad holds the data .
+-updating the data to the ui after getting it from the server
 
-// requirement no.2
-osberving the current section being viewed .
+= in the server side
 
-- deciding when the section is inside the viewport
-- Appling a background overlay for sections when in the viewport
-- applying the active state to the coresponding list item.
-- removing the active states from both the sectoin and the list item if its not active .
+-inside the servet side we install all the dependinceis needed .
+-installing the express and making an instance called app out of it .
+-installing the cors and using it to cross the bridge betweent th two sides .
+-installing the midlleware to parse the info obtained .
+-creating a port variable and making the server listen to it .
+-storing data got from the api and the user data in an object to later fetch the data from it when -ever the need calls usong app.post
+-send the data to the client side when asking for it using app.get
 
-// requirement no.3
+-fore sure lets not forget linking the folder to penetrate the front end files
 
-making the scrolling more smooth
-using the Css property scroll-behavior : smooth ;
-*****
-to activathe the smooth scrolling in your browser if it is not alredy working, jsut follow the three simple steps in the coming url,
-https://www.tenforums.com/tutorials/112915-enable-disable-smooth-scrolling-google-chrome.html
+-i made sure that the { errorMessage.innerText = `please share your feelings with us` }, 500);
+errorMessage.style.color = `red`}; error message in line 25 are delayed for half a seconed so the text appears after the async function note before , this message appears when the feelings areatext is empty.
+-i have created a whole new styling for the file to test my css skills .
+-i have commited some other extra js functions like the alert and the modal window even though the info enclosed in them may not be very accurate , the logic is what i was really testing .
+-also the alert poped up when the zip code isnt in the right length
+required changes are made
 
-EXTRA SPICES
-
-- adding some more css styling like the gradient color at the top of every section overlay background using your-active-class class , also the border around it ,
-  adding some hovering effects for the paragraphs and main headings .
-- inserting a go-up button to easly transit the user to the top of the page
-
-// Extra notes
-// it was important for me to make sure the unnecessary white spaces are removed, specially trailing whitspaces .
-
-
-# LandingPage-
+-the api key is is moved to the top with using the const as the keyword instad of the let.
+-also the month value is increased by one to macth the real one.
